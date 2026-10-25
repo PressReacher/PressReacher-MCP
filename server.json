@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "com.pressreacher/mcp",
+  "version": "1.0.0",
+  "description": "Official MCP server for PressReacher: find UK journalists, verify emails, and build media lists from your AI assistant. Search by country, beat, outlet, or article coverage. Available on paid plans (Freelancer, Agency, Enterprise).",
+  "homepage": "https://pressreacher.com/mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Reactively/PressReacher-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "pr",
+    "public-relations",
+    "journalists",
+    "media-relations",
+    "ai-tools",
+    "claude",
+    "chatgpt"
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://pressreacher.com/api/mcp/",
+      "protocol": "2025-03-26",
+      "auth": {
+        "methods": ["oauth", "bearer"],
+        "oauth": {
+          "authorization_endpoint": "https://pressreacher.com/api/mcp/oauth/authorize",
+          "token_endpoint": "https://pressreacher.com/api/mcp/oauth/token",
+          "metadata": "https://pressreacher.com/.well-known/oauth-protected-resource"
+        },
+        "bearer": {
+          "description": "Generate a Bearer token from the PressReacher dashboard at Settings → MCP",
+          "docs": "https://pressreacher.com/mcp/#bearer-token"
+        }
+      }
+    }
+  ],
+  "vendor": {
+    "name": "PressReacher",
+    "url": "https://pressreacher.com",
+    "contact": "abbie@pressreacher.com"
+  },
+  "support": {
+    "email": "abbie@pressreacher.com",
+    "url": "https://pressreacher.com/mcp/"
+  }
+}

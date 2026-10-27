@@ -4,7 +4,7 @@
 
 **Official MCP server for PressReacher**
 
-Find UK journalists, verify emails, and build media lists from your AI assistant
+Search 2M+ journalists across 50+ countries, verify emails, and build media lists from your AI assistant
 
 [![MCP](https://img.shields.io/badge/MCP-2025--03--26-blue?style=flat-square)](https://modelcontextprotocol.io/)
 [![Transport](https://img.shields.io/badge/Transport-Streamable%20HTTP-green?style=flat-square)](https://pressreacher.com/api/mcp/)
@@ -17,11 +17,24 @@ Find UK journalists, verify emails, and build media lists from your AI assistant
 
 ---
 
+## Cursor plugin
+
+Install the official **PressReacher** plugin from the [Cursor Marketplace](https://cursor.com/marketplace) (search for **pressreacher**), or add this repository as a local plugin in Cursor.
+
+1. After install, Cursor connects to the PressReacher MCP server defined in `mcp.json`.
+2. When prompted, **sign in with your PressReacher account** (OAuth). Cursor discovers OAuth automatically from the server.
+3. A **paid PressReacher plan** is required. Trial accounts receive **403** when connecting to MCP.
+4. **Revoke access:** [PressReacher Dashboard → Settings → MCP](https://pressreacher.com/dashboard/settings/mcp) — disconnect the OAuth app or revoke tokens.
+
+**Manual setup (Bearer token):** If you prefer not to use the plugin or OAuth, add a remote MCP server in Cursor with URL `https://pressreacher.com/api/mcp/` and header `Authorization: Bearer <your-token>`. Create a personal token at [Dashboard → Settings → MCP](https://pressreacher.com/dashboard/settings/mcp) (format: `pr_mcp_...`). Revoke the token from the same page when needed.
+
+---
+
 ## What You Can Do
 
 Ask your AI assistant in plain language:
 
-> **"Find 50 UK technology journalists with working emails and add them to a new collection called AI Startups"**
+> **"Find 50 technology journalists across the US and UK with working emails and add them to a new collection called AI Startups"**
 
 > **"Search for journalists who recently wrote about sustainable fashion. Show me their contact details and open rates."**
 
@@ -137,9 +150,13 @@ OAuth handles authentication automatically.
 </details>
 
 <details>
-<summary><b>🔷 Cursor (Bearer Token)</b></summary>
+<summary><b>🔷 Cursor (Marketplace plugin or Bearer Token)</b></summary>
 
 <br>
+
+**Recommended:** Install the **pressreacher** plugin from the Cursor Marketplace (see [Cursor plugin](#cursor-plugin) above) and sign in with OAuth when prompted.
+
+**Bearer token alternative:**
 
 1. Generate a Bearer token:
    - Go to [PressReacher Settings → MCP](https://pressreacher.com/dashboard/settings/mcp)
@@ -153,9 +170,9 @@ OAuth handles authentication automatically.
      ```
      https://pressreacher.com/api/mcp/
      ```
-   - Configure authorization header with your token
+   - Set header: `Authorization: Bearer <your-token>`
 
-**To revoke access:** Delete the token from [PressReacher Settings → MCP](https://pressreacher.com/dashboard/settings/mcp).
+**To revoke access:** Disconnect OAuth or delete the token from [PressReacher Settings → MCP](https://pressreacher.com/dashboard/settings/mcp).
 
 </details>
 
@@ -273,7 +290,7 @@ Yes! The `verify_email` tool works with **any email address**, not just journali
 <br>
 
 - **OAuth (Claude, ChatGPT):** Sign in once with your PressReacher account. The app manages tokens automatically.
-- **Bearer token (Grok, Gemini, Cursor):** You generate and configure a static token manually. Revoke it anytime from the dashboard.
+- **Bearer token (Grok, Gemini, manual Cursor setup):** You generate and configure a static token manually. Revoke it anytime from the dashboard.
 
 Both methods have the same rate limits and access to the same tools.
 

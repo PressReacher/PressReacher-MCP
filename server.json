@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "com.pressreacher/mcp",
   "version": "1.0.0",
-  "description": "Official MCP server for PressReacher: find UK journalists, verify emails, and build media lists from your AI assistant. Search by country, beat, outlet, or article coverage. Available on paid plans (Freelancer, Agency, Enterprise).",
+  "description": "Official MCP server for PressReacher: search 2M+ journalists across 50+ countries, verify emails, and build media lists from your AI assistant. Search by country, beat, outlet, or article coverage. Available on paid plans (Freelancer, Agency, Enterprise).",
   "homepage": "https://pressreacher.com/mcp/",
   "repository": {
     "type": "git",

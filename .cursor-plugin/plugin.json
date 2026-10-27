@@ -1,0 +1,11 @@
+{
+  "name": "pressreacher",
+  "version": "1.0.0",
+  "description": "Official PressReacher plugin. Search 2M+ journalists across 50+ countries, verify email addresses, build media lists, and create draft campaigns and media alerts in your PressReacher account from Cursor. Requires a paid PressReacher plan.",
+  "author": { "name": "PressReacher", "email": "abbie@pressreacher.com" },
+  "homepage": "https://pressreacher.com/mcp/",
+  "repository": "https://github.com/Reactively/PressReacher-MCP",
+  "license": "MIT",
+  "keywords": ["pr", "public-relations", "journalists", "media-lists", "outreach", "email-verification", "mcp"],
+  "logo": "assets/logo-square.png"
+}

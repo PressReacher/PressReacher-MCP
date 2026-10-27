@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "pressreacher": {
+      "url": "https://pressreacher.com/api/mcp/"
+    }
+  }
+}

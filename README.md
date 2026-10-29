@@ -19,12 +19,12 @@ Search 2M+ journalists across 50+ countries, verify emails, and build media list
 
 ## Cursor plugin
 
-Install the official **PressReacher** plugin from the [Cursor Marketplace](https://cursor.com/marketplace) (search for **pressreacher**), or add this repository as a local plugin in Cursor.
+Add this repository as a local plugin in Cursor.
 
-1. After install, Cursor connects to the PressReacher MCP server defined in `mcp.json`.
-2. When prompted, **sign in with your PressReacher account** (OAuth). Cursor discovers OAuth automatically from the server.
-3. A **paid PressReacher plan** is required. Trial accounts receive **403** when connecting to MCP.
-4. **Revoke access:** [PressReacher Dashboard → Settings → MCP](https://pressreacher.com/dashboard/settings/mcp) — disconnect the OAuth app or revoke tokens.
+1. Clone this repository and add it as a local plugin in Cursor.
+2. Cursor connects to the PressReacher MCP server defined in `mcp.json`.
+3. When prompted, **sign in with your PressReacher account** (OAuth). Cursor discovers OAuth automatically from the server.
+4. A **paid PressReacher plan** is required. Trial accounts receive **403** when connecting to MCP. **Revoke access:** [PressReacher Dashboard → Settings → MCP](https://pressreacher.com/dashboard/settings/mcp): disconnect the OAuth app or revoke tokens.
 
 **Manual setup (Bearer token):** If you prefer not to use the plugin or OAuth, add a remote MCP server in Cursor with URL `https://pressreacher.com/api/mcp/` and header `Authorization: Bearer <your-token>`. Create a personal token at [Dashboard → Settings → MCP](https://pressreacher.com/dashboard/settings/mcp) (format: `pr_mcp_...`). Revoke the token from the same page when needed.
 
@@ -150,11 +150,11 @@ OAuth handles authentication automatically.
 </details>
 
 <details>
-<summary><b>🔷 Cursor (Marketplace plugin or Bearer Token)</b></summary>
+<summary><b>🔷 Cursor (local plugin or Bearer Token)</b></summary>
 
 <br>
 
-**Recommended:** Install the **pressreacher** plugin from the Cursor Marketplace (see [Cursor plugin](#cursor-plugin) above) and sign in with OAuth when prompted.
+**Recommended:** Add this repository as a local plugin (see [Cursor plugin](#cursor-plugin) above) and sign in with OAuth when prompted.
 
 **Bearer token alternative:**
 
